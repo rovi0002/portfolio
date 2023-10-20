@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeGen-A</title>
+    <link rel="stylesheet" href="codegen-a.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="body-container">
+        <div class="name_content_container">
+            <h1>CodeGen-A</h1>
+            <div class="container">
+                <p>Password size:</p>
+                <div class="slider-container">
+                    <input type="range" min="4" max="24" value="50" class="slider">
+                    <div class="slider-thumb">
+                        <div class="tooltip"></div>
+                    </div>
+                    <div class="progress"></div>
+                </div>
+                <div class="checkbox-container">
+                    <div class="checkbox1">
+                        <label for="check1">camelCase: </label>
+                        <input type="checkbox" id="check1" onclick="checkBoxing" checked>
+                    </div>
+                    <div class="checkbox2">
+                        <label for="check2">Numbers: </label>
+                        <input type="checkbox" id="check2" onclick="checkBoxing">
+                    </div>
+                    <div class="checkbox3">
+                        <label for="check3">Special symbols: </label>
+                        <input type="checkbox" id="check3" onclick="checkBoxing">
+                    </div>
+                </div>
+                <button type="button" id="gen-button" class="border-gradient border-gradient-button">Generate</button>
+                <div class="password-result-box">
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
+        <canvas id="canvas"></canvas>
+        <script src="codegen-a.js"></script>
+    </div>
+</body>
+</html>
